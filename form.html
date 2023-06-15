@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Document</title>
+    <style>
+        ul, li{ list-style: none;}
+        input{ outline: none;}
+        #interview{
+            width:400px; margin: 0 auto;
+            line-height: 3;
+        }
+        #interview input{
+            border:0
+        }
+        #interview .border{
+            border: 2px solid black;
+            margin: 5px 0;
+        }
+        .d-flex{ display: flex;}
+
+        #interview [type="checkbox"]{
+           display: none;
+        }
+        #interview [type="checkbox"] + label{
+            display: flex;
+            align-items: center;
+        }
+        #interview [type="checkbox"] + label:before{
+            content: "\F272";
+            display: inline-block;          
+            border:2px solid #ccc;
+            margin-right: 10px;  
+            line-height: 1; 
+            color:transparent;
+            font-family: bootstrap-icons !important;
+            border-radius: 50%;
+           
+        }
+        #interview [type="checkbox"]:checked + label:before{
+           color:black;
+           border-color:black
+        }
+      
+
+    </style>
+</head>
+<body>
+    <section id="interview">
+        
+        <form action="https://www.11st.co.kr" method="GET" name="interview">
+            <div class="border">
+                <label for="name">* 회사명</label>
+                <input type="text"   name="name" required>
+            </div>
+            <div  class="border">
+                <label for="interviewDay">* 면접날짜</label>
+                <input type="text"   name="interviewDay" required>
+            </div>  
+            <div class="d-flex border">
+                <p> 구직자 필수 언어 </p>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="all"  name="all">
+                        <label for="all">모두</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="leng0"  name="leng0">
+                        <label for="leng0">Nodejs</label>
+                    </li>
+                    <li>
+                        <input type="checkbox"  id="leng1" name="leng1">
+                        <label for="leng1">React</label>
+                    </li>
+                    <li>
+                        <input type="checkbox"  id="leng2" name="leng2">
+                        <label for="leng2">jQuery</label>
+                    </li>
+                    <li>
+                        <input type="checkbox"  id="leng3" name="leng3">
+                        <label for="leng3">php</label>
+                    </li>
+                </ul>
+            </div>    
+            <div class="d-flex border">
+                <p> 구직자 필수 언어 </p>
+                <ul>
+                   
+                    <li>
+                        <input type="radio" id="leng01"  name="fm">
+                        <label for="leng01">Nodejs</label>
+                    </li>
+                    <li>
+                        <input type="radio"  id="leng11" name="fm">
+                        <label for="leng11">React</label>
+                    </li>
+                  
+                </ul>
+            </div>  
+            <div>                
+                <input type="checkbox" id="agree" required>
+                <label for="agree">개인정보정책동의</label>
+            </div>       
+            <input type="submit" value="제안하기">
+        </form>
+
+    </section>
+    <script
+			  src="https://code.jquery.com/jquery-2.2.4.js"
+			  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+			  crossorigin="anonymous"></script>
+    <script>
+       $('#interview [type="submit"]').click(function(){
+          if( $("#agree").is(":checked") == false ){
+            alert("개인정보정책 동의해주세요.")
+          }
+       })
+
+
+       
+    </script>
+    
+</body>
+</html>
