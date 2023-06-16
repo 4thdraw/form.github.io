@@ -1,8 +1,12 @@
 :root{
-    --darkbase : #1e1e1e,
-    --besicbg : #f0ece8,
-    --fontbasic : 'Noto Sans KR'         
+    --darkbase : #1e1e1e; // 배경색, 글자색 어두운색
+    --besicbg : #f0ece8;  // 베이직 배경색
+    --fontbasic : 'Noto Sans KR'; // 기본폰트
+    --fontlight : #999; // 폰트 밝은색         
 }
+
+*{ margin: 0; padding: 0;}
+a{text-decoration: none;}
 
 .font100{ font-weight: 100 !important;}
 .font400{ font-weight: 400 !important;}
@@ -15,7 +19,23 @@
 .baseBg{
     background-color: var(--besicbg) !important;
 }
-
+#hd{
+    position: relative;
+    z-index: 1100;
+    h1{
+        font-size: 0.9rem;
+        border-radius: 0.5rem;
+        margin-bottom: 0;
+        width:3.8rem;
+        height:3.8rem;
+        padding: 0 0 0.3rem 0.5rem;
+        transform: rotate(-11deg);
+    }
+    a{
+       font-size:0.75rem;
+       color: var(--fontlight)
+    }
+}
 #contact{
     color: var(--darkbase);
     font-family: var(--fontbasic);
