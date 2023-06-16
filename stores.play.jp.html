@@ -17,7 +17,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">  
 
 
-    <link rel="stylesheet" href="scss/contact.min.css">
+    <link rel="stylesheet" href="scss/contact.min.css" charset='utf-8'>
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
@@ -58,17 +58,40 @@
                                 <label for="" class="d-flex ">회사명<span class="ess">필수</span></label>
                                 <input type="text" placeholder="회사명을 한글로 써주세요.">
                             </li>
-                            <li class="col-6  mb-3">
+                            <li class="col-6  mb-3 pe-2">
                                 <label for=""  class="d-flex ">성<span class="ess">필수</span></label>
                                 <input type="text" placeholder="한글성">
                             </li> 
-                            <li class="col-6  mb-3">
+                            <li class="col-6  mb-3 ps-2">
                                 <label for=""  class="d-flex ">이름<span class="ess">필수</span></label>
                                 <input type="text" placeholder="한글이름">
-                            </li>                           
+                            </li> 
+                            <li class="col-12 mb-3">
+                                <label for="" class="d-flex ">주소</label>
+                                <input type="text" >
+                            </li>
+                            <li class="col-12 mb-3">
+                                <label for="" class="d-flex ">전화번호<span class="ess">필수</span></label>
+                                <input type="text" placeholder="000-0000-0000형식으로 기입해주세요.">
+                            </li>   
+                            <li class="col-9 mb-3">
+                                <label for="" class="d-flex ">SNS</label>
+                                <input type="text" placeholder="카카오톡 아이디">
+                            </li>  
+                            <li class="col-12 mb-3">
+                                <label for="" class="d-flex ">내용<span class="ess">필수</span></label>
+                                <textarea rows="4" class="d-block w-100">
+                                </textarea>
+                            </li>                     
                         </ul>
-
-                        <input type="submet" value="면접제안">
+                        <div class="submit text-center mb-5 col-md-8 mx-auto">
+                            <div class="mb-5">
+                                <input type="checkbox" id="agree">
+                                <label for="agree"><i class="bi bi-check2"></i>개인정보정책동의</label>
+                            </div>
+                            <input type="submit" value="면접제안" class="text-center w-100">
+                        </div>
+                      
                     </form>
                  </div>
             </div>

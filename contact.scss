@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root{
     --darkbase : #1e1e1e; // 배경색, 글자색 어두운색
     --besicbg : #f0ece8;  // 베이직 배경색
@@ -44,6 +45,7 @@ a{text-decoration: none;}
     position: relative;
     z-index: 1100;
     border-radius: 0 0 2rem 2rem;
+    margin-bottom: 100vh; //fixed footer 노출을 위해 바깥여백
     h2{
         position: relative;
         // transform: translateY(30%);
@@ -79,12 +81,22 @@ a{text-decoration: none;}
         .ess{
             background-color: var(--darkbase);
             color:white;
-            font-size: 0.6em;
+            font-size: 0.5em;
             margin-left: 0.5em;
-        }       
+            border-radius: 4px;
+            line-height: 1;
+            padding: 4px;
+        } 
+        textarea{
+            outline: none;
+            border-width: 0 0 1px 0;
+        }      
     }
 
     input[type=text]{
+        font-size: 0.8rem;
+        line-height: 3;
+        margin-top: 8px;
         outline: none;
         width:100%;
         border-width : 0 0 1px 0;
@@ -104,22 +116,52 @@ a{text-decoration: none;}
       }
     }
     label{
+       font-size: 1rem;
+       align-items: flex-start;
        line-height: 1;
         &:before{
             content: "";
             color: transparent;
-            font-family: "bootstrap-icons";
+            font-family: "bootstrap-icons" !important;            
         }         
+    }
+    input[type=checkbox] + label{
+        i{
+            border:2px solid var(--darkbase);
+            padding: 0 0.2em;
+            margin-right: 0.3em;
+        }
     }
     
     input[type=checkbox] + label{
-        &:before{
-            content: "\F272";    
+        i::before{           
+            // content: "\F272";
+            // display: inline-block;          
+            // border:2px solid #ccc;
+            // margin-right: 10px;  
+            // line-height: 1; 
+            color:transparent;
+            // font-family: bootstrap-icons !important;
+            // border-radius: 50%;            
         }
     }
     input[type=radio] + label{
         &:before{
-        content: "\F287";
+            content: "\f287";
+        }
+    }
+    input[type=checkbox]:checked + label{
+        i::before{ 
+            color:  var(--darkbase);    
+        }
+    }
+    input[type="submit"]{
+        border:2px solid var(--darkbase);
+        transition: 0.5s;
+        background-color: white;
+        &:hover{
+            background-color: var(--darkbase);
+            color:white;
         }
     }
       
