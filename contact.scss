@@ -43,8 +43,12 @@ a{text-decoration: none;}
     line-height: 2;
     position: relative;
     z-index: 1100;
+    border-radius: 0 0 2rem 2rem;
     h2{
         position: relative;
+        // transform: translateY(30%);
+        // margin-bottom: -50px !important;
+        bottom: -40px;
         strong{
             font-size: 180px;
             letter-spacing: -0.095em;
@@ -60,13 +64,29 @@ a{text-decoration: none;}
            right:0;
            top:50%;           
         }
+        @media (max-width:991px) {
+            strong{
+                font-size: 14vw;                
+            }
+            span{             
+               font-size: 3vw;                   
+            }            
+        }
     }
     .formSection{
         border-radius: 2rem;
-        overflow: hidden;        
+        overflow: hidden; 
+        .ess{
+            background-color: var(--darkbase);
+            color:white;
+            font-size: 0.6em;
+            margin-left: 0.5em;
+        }       
     }
 
     input[type=text]{
+        outline: none;
+        width:100%;
         border-width : 0 0 1px 0;
         border-color: var(--darkbase);
         border-style: solid;
@@ -84,6 +104,7 @@ a{text-decoration: none;}
       }
     }
     label{
+       line-height: 1;
         &:before{
             content: "";
             color: transparent;
