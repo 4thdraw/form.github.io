@@ -41,6 +41,31 @@ a{text-decoration: none;}
     font-family: var(--fontbasic);
     font-size: 1.2em;
     line-height: 2;
+    position: relative;
+    z-index: 1100;
+    h2{
+        position: relative;
+        strong{
+            font-size: 180px;
+            letter-spacing: -0.095em;
+            font-family: 'Mulish';
+            font-weight: 100;            
+        }
+        span{
+           position: absolute;
+           border:2px solid var(--darkbase);
+           transform: rotate(-11deg) translateY(-50%);
+           font-size: 0.8em;
+           white-space: nowrap;
+           right:0;
+           top:50%;           
+        }
+    }
+    .formSection{
+        border-radius: 2rem;
+        overflow: hidden;        
+    }
+
     input[type=text]{
         border-width : 0 0 1px 0;
         border-color: var(--darkbase);
