@@ -51,7 +51,13 @@
             </h2>
             <div class="bg-white formSection p-5">
                  <div class="col-8 mx-auto">
-                    <form action="name에 저장된 데이터를 넘겨줄 페이지" method="get" name="faq">
+                    <form action="http://www.naver.com" method="get" name="faq">
+                        <!-- 주소창에 변수의 해당값이 대입되어 있는 것이 보임 
+                             GET 방식은 주소창에 노출되는 값들로 작은 테이터들일때,
+                                : 검색페이지
+                             Post방식은 숨김처리 및 큰 데이터 넘길때
+                                : 회원가입페이지
+                        -->
 
                         <ul class="d-flex flex-wrap text-start m-0 p-0">
                             <li class="col-12 mb-3">
@@ -71,19 +77,30 @@
                                 <input type="text" >
                             </li>
                             <li class="col-12 mb-3">
+                                <h3 class="title">언어</h3>
+                                <div class="d-flex flex-wrap align-items-center" id="lenSection">
+                                    <input type="checkbox" id="lengall" >
+                                    <label for="lengall"><i class="bi bi-check2"></i>ALL</label>
+                                    <input type="checkbox" id="leng0" name="leng[0]" value="노드" >
+                                    <label for="leng0"><i class="bi bi-check2"></i>Nodejs</label>
+                                    <input type="checkbox" id="leng1" name="leng[1]" value="리액트" >
+                                    <label for="leng1"><i class="bi bi-check2"></i>React</label>
+                                    <input type="checkbox" id="leng2" name="leng[2]" value="제이쿼리">
+                                    <label for="leng2"><i class="bi bi-check2"></i>jQuery</label>
+                                    <input type="checkbox" id="leng3" name="leng[3]" value="바닐라">
+                                    <label for="leng3"><i class="bi bi-check2"></i>vinillaJS</label>
+                                    <input type="type" id="leng4" name="leng[4]" class="col-md-3" placeholder="기타 다른 언어" >                                    
+                                </div>                                
+                            </li>
+                            <li class="col-12 mb-3">
                                 <label for="" class="d-flex ">이메일<span class="ess">필수</span></label>
-                                <div id="emailsection" class="d-md-flex">
-                                    <!-- 
-                                        일직선으로 가운데 정렬로 할것 
-                                        셀렉트 박스의 직접입력을 선택하면
-                                        직접입력 input이 노출되는 자바스크립트 삽입
-                                    -->
+                                <div id="emailsection" class="d-md-flex">                                   
                                     <input type="text" name="email[0]" ><span>@</span>
                                     <select  name="email[1]" class="form-select" >
                                         <option value="naver.com" selected>naver.com</option>
                                         <option value="google.com">google.com</option>
                                         <option value="daum.net">daum.net</option>
-                                        <option >직접입력</option>
+                                        <option value="">직접입력</option>
                                     </select>
                                     <input  type="text" class="directW"  name="email[1]" placeholder="직접입력">
                                 </div>                                
