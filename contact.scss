@@ -9,6 +9,28 @@
 *{ margin: 0; padding: 0;}
 a{text-decoration: none;}
 
+input::placeholder {
+    color: red !important;
+    font-style: italic;
+}
+input::-webkit-input-placeholder {
+    color: red !important;
+    font-style: italic;
+  }
+input:-ms-input-placeholder {
+    color: red !important;
+    font-style: italic;
+  }
+textarea::-webkit-input-placeholder {
+    color: blue !important;
+    font-weight: bold;
+  }
+textarea:-ms-input-placeholder {
+    color: blue !important;
+    font-weight: bold;
+}
+
+
 .font100{ font-weight: 100 !important;}
 .font400{ font-weight: 400 !important;}
 .font500{ font-weight: 500 !important;}

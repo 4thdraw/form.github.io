@@ -51,7 +51,7 @@
             </h2>
             <div class="bg-white formSection p-5">
                  <div class="col-8 mx-auto">
-                    <form action="" method="get" name="faq">
+                    <form action="name에 저장된 데이터를 넘겨줄 페이지" method="get" name="faq">
 
                         <ul class="d-flex flex-wrap text-start m-0 p-0">
                             <li class="col-12 mb-3">
@@ -71,9 +71,27 @@
                                 <input type="text" >
                             </li>
                             <li class="col-12 mb-3">
+                                <label for="" class="d-flex ">이메일<span class="ess">필수</span></label>
+                                <div id="emailsection" class="d-md-flex">
+                                    <!-- 
+                                        일직선으로 가운데 정렬로 할것 
+                                        셀렉트 박스의 직접입력을 선택하면
+                                        직접입력 input이 노출되는 자바스크립트 삽입
+                                    -->
+                                    <input type="text" name="email[0]" ><span>@</span>
+                                    <select  name="email[1]" >
+                                        <option>naver.com</option>
+                                        <option>google.com</option>
+                                        <option>daum.net</option>
+                                        <option>직접입력</option>
+                                    </select>
+                                    <input type="text"  name="email[1]" placeholder="직접입력">
+                                </div>                                
+                            </li> 
+                            <li class="col-12 mb-3">
                                 <label for="" class="d-flex ">전화번호<span class="ess">필수</span></label>
                                 <input type="text" placeholder="000-0000-0000형식으로 기입해주세요.">
-                            </li>   
+                            </li>  
                             <li class="col-9 mb-3">
                                 <label for="" class="d-flex ">SNS</label>
                                 <input type="text" placeholder="카카오톡 아이디">
@@ -86,7 +104,7 @@
                         </ul>
                         <div class="submit text-center mb-5 col-md-8 mx-auto">
                             <div class="mb-5">
-                                <input type="checkbox" id="agree">
+                                <input type="checkbox" id="agree" >
                                 <label for="agree"><i class="bi bi-check2"></i>개인정보정책동의</label>
                             </div>
                             <input type="submit" value="면접제안" class="text-center w-100">
