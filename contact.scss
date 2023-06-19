@@ -109,6 +109,7 @@ textarea:-ms-input-placeholder {
             line-height: 1;
             padding: 4px;
         } 
+
         textarea{
             outline: none;
             border-width: 0 0 1px 0;
@@ -186,5 +187,19 @@ textarea:-ms-input-placeholder {
             color:white;
         }
     }
+    #emailsection{
+        .directW{
+            display: none;
+        }
+        &.act{
+            .form-select{
+               margin-right: 1rem;
+            }
+            .directW{
+                display: block;
+            }
+        }
+    }
+   
       
 }
